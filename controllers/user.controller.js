@@ -6,7 +6,7 @@ const Note = require("../models/Products");
 const { body, validationResult } = require("express-validator");
 
 // insert data
-router.post('/add', [body("name", "enter valid heading").isLength({ min: 2 })], async (req, res) => {
+router.post('/add', [body("name", "enter valid name").isLength({ min: 2 })], async (req, res) => {
 
     try {
         const { name, description, price, quantity, category } = req.body;
