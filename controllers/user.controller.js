@@ -1,7 +1,5 @@
 const Note = require("../models/Products");
 
-// const { body, validationResult } = require("express-validator");
-
 // // update data
 module.exports.updateProducts = async (req, res) => {
     const { name, description, price, quantity, category } = req.body;
@@ -69,7 +67,7 @@ module.exports.deleteAllProducts = async (req, res) => {
     }
 
 };
-// get all the notes
+// get all the notes and find product by name
 module.exports.find = async (req, res) => {
 
     const { name } = req.query;
@@ -114,5 +112,3 @@ module.exports.fetchSingleProduct = async (req, res) => {
         res.status(500).send("internal server error occurred");
     }
 }
-
-// module.exports = router;
